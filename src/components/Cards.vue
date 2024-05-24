@@ -11,7 +11,7 @@ const nav = ref({});
 async function fetchNews() {
     try {
         const response = await axios.get(
-            `http://flems.github.io/test/api/news/${currentPage.value}`,
+            `https://flems.github.io/test/api/news/${currentPage.value}`,
         );
         newsItems.value = [...newsItems.value, ...response.data.items];
         nav.value = response.data.nav;
